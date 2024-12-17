@@ -24,7 +24,7 @@
 
 2. Анализ уязвимого PHP-кода
 Исходный код:
-
+```
 <?php
 
 if( isset( $_GET\[ 'Login' \] ) ) {
@@ -51,7 +51,7 @@ if( isset( $_GET\[ 'Login' \] ) ) {
 	((is_null($___mysqli_res = mysqli_close($GLOBALS\["___mysqli_ston"\]))) ? false : $___mysqli_res);
 }
 ?>
-
+```
 
 Выявленные уязвимости и CWE:
 
@@ -70,7 +70,7 @@ SQL-инъекция (CWE-89):
 
 
 3. Исправленный PHP-код с защитой
-
+```
 <?php
 session_start();
 require_once 'db.php'; // Подключение к БД
@@ -99,7 +99,7 @@ if (isset($_GET['Login'])) {
     }
 }
 ?>
-
+```
 
 Вывод
 
